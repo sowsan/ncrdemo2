@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: sowsanncrdemo2 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sowsanncrdemo2 
+    spec:
+      containers:
+        - name: sowsanncrdemo2 
+          image: sh360.azurecr.io/sowsanncrdemo2 
+          ports:
+          - containerPort: 80
